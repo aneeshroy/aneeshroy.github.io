@@ -1,0 +1,206 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(135deg, #151531, #421a92);
+    background-size: 200% 200%;
+    animation: gradientBackground 8s ease infinite;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@keyframes gradientBackground {
+    0% { background-position: 0% 0%; }
+    25% { background-position: 50% 50%; }
+    50% { background-position: 100% 100%; }
+    75% { background-position: 50% 50%; }
+    100% { background-position: 0% 0%; }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fade-in-right {
+    opacity: 0;
+    animation: fadeInRight 1s forwards;
+}
+
+.content-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto; /* Allow content to scroll */
+}
+
+.container {
+    width: 80%;
+    padding: 2em; /* Adjust padding */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 4em; /* Add top margin */
+}
+
+.top-left {
+    width: 100%;
+    padding-bottom: 2em;
+    z-index: 1; /* Ensure it stays above other content */
+}
+
+.page-links {
+    font-size: 1.2em;
+    margin-top: 1em; /* Add margin-top for space */
+    margin-bottom: 1em;
+}
+
+.page-links a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    margin-bottom: 0.5em;
+}
+
+.page-links a:hover {
+    text-decoration: underline;
+}
+
+.home-content, .contact-content {
+    width: 100%;
+    margin-top: 2em;
+    text-align: right; /* Center-align the content for home and contact pages */
+}
+
+.about-content, .projects-container {
+    width: 100%;
+    margin-top: 2em;
+    text-align: right; /* Right-align the content for about and projects pages */
+}
+
+.project {
+    margin-bottom: 2em;
+    opacity: 0; /* Hide initially for animation */
+}
+
+.project-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 1em;
+}
+
+.project h2 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.project p {
+    font-size: 1.2em;
+    line-height: 1.5em;
+    margin-bottom: 1em;
+}
+
+.project-link {
+    color: #39beff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+}
+
+.profile-image {
+    max-width: 50%;
+    height: auto;
+    border-radius: 20px;
+    margin-bottom: 1em;
+}
+
+.editable-paragraph {
+    font-size: 1.2em;
+    line-height: 1.5em;
+}
+
+footer {
+    width: 100%;
+    background-color: #151531;
+    color: #ffffff;
+    text-align: center;
+    padding: 1em 0;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+
+    .top-left {
+        padding: 1em;
+    }
+
+    .top-left h1 {
+        font-size: 2em;
+    }
+
+    .top-left p {
+        font-size: 1em;
+    }
+
+    .page-links {
+        font-size: 1em;
+        margin-top: 1em; /* Add margin-top for space */
+        margin-bottom: 1em;
+    }
+
+    .page-links a {
+        margin-bottom: 0.5em;
+    }
+
+    .home-content, .about-content, .projects-container, .contact-content {
+        margin-top: 3em;
+    }
+
+    .profile-image {
+        max-width: 80%;
+        margin-bottom: 1em;
+    }
+
+    .editable-paragraph, .project p {
+        font-size: 1em;
+    }
+
+    .project h2 {
+        font-size: 1.2em;
+    }
+
+    .project-link {
+        font-size: 1em;
+    }
+}

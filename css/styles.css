@@ -13,7 +13,7 @@ body {
     font-family: 'Quicksand', sans-serif;
     background: linear-gradient(135deg, #151531, #421a92);
     background-size: 200% 200%;
-    animation: gradientBackground 8s ease infinite;
+    animation: gradientBackground 13.33s ease infinite;
     color: #ffffff;
     display: flex;
     flex-direction: column;
@@ -111,7 +111,7 @@ body {
     margin-bottom: 1em;
 }
 
-.project h2 {
+.project h2, .project h3 {
     font-size: 1.5em;
     margin-bottom: 0.5em;
 }
@@ -142,6 +142,41 @@ body {
 .editable-paragraph {
     font-size: 1.2em;
     line-height: 1.5em;
+}
+
+.gallery {
+    position: relative;
+    max-width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.gallery-images img {
+    width: 100%;
+    display: none;
+}
+
+.gallery-images img.active {
+    display: block;
+}
+
+.gallery-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.gallery-controls .prev,
+.gallery-controls .next {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
 }
 
 footer {
@@ -196,7 +231,7 @@ footer {
         font-size: 1em;
     }
 
-    .project h2 {
+    .project h2, .project h3 {
         font-size: 1.2em;
     }
 

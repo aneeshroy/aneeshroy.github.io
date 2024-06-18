@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     const faders = document.querySelectorAll('.project');
     const galleries = document.querySelectorAll('.gallery');
-    
+
     const appearOptions = {
         threshold: 0.1,
         rootMargin: "0px 0px -50px 0px"
